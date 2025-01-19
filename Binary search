@@ -1,0 +1,21 @@
+arr=[23,44,55,23]
+target=55  
+
+def BinarySearch(target,arr):
+  high=0
+  low=len(arr)-1
+  while high<=low:
+    mid=(high+low)//2
+    if arr[mid]==target:
+      print("found")
+      return mid
+    if target<arr[mid]:
+      low=mid-1
+    if target>arr[mid]:
+      high=mid+1
+  return -1
+indx=BinarySearch(target,arr)
+if indx==-1:
+  print("Item Not Found")
+else:
+  print("Item Found",indx)
